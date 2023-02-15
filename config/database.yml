@@ -1,0 +1,20 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  username: root
+  password: 1
+  host: test-db
+  port: 3306
+  timeout: 5000
+
+development:
+  <<: *default
+  database: broadpackager
+
+test:
+  <<: *default
+  database: broadpackager_test
+
+production:
+  <<: *default
+  database: broadpackager
